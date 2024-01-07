@@ -142,3 +142,6 @@ Contributions are welcome! 🤝
 ## ```License```
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license. 📄
+
+## Updates (2025-01-02)
+- Added new documentation
