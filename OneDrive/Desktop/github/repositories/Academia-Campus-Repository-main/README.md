@@ -145,3 +145,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## Updates (2025-01-02)
 - Added new documentation
+
+## Updates (2025-01-02)
+- Added new documentation
