@@ -1,0 +1,27 @@
+services:
+  # PostgreSQL Database
+  - type: pserv
+    name: evershop-db
+    plan: free
+    databaseName: evershop
+    user: evershop_user
+    version: "15"
+
+  # EverShop Node.js Backend
+  - type: web
+    name: evershop-app
+    plan: free
+    env: node
+    # Build command: Install dependencies and compile the TypeScript source
+    buildCommand: "npm install && npm run compile"
+    # Start command: Run the production server
+    startCommand: "npm run start"
+    envVars:
+      # Let Render inject the database connection string
+      - key: DATABASE_URL
+        fromService:
+          type: pserv
+          name: evershop-db
+          property: connectionString
+      - key: NODE_ENV
+        value: production
